@@ -1,0 +1,278 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+.navbar {
+    background-color: #111827;
+    color: white;
+    padding: 18px 6%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.container {
+    width: 88%;
+    max-width: 1150px;
+    margin: 28px auto;
+}
+
+.page-heading {
+    margin-bottom: 22px;
+}
+
+.page-heading h2 {
+    margin: 0 0 7px;
+    font-size: 26px;
+}
+
+.page-heading p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.summary-card,
+.panel {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+.summary-card {
+    padding: 22px;
+}
+
+.summary-card p {
+    margin: 0 0 10px;
+    color: #6b7280;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.summary-card h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.panel {
+    padding: 24px;
+    margin-bottom: 26px;
+}
+
+.panel h2 {
+    margin: 0 0 20px;
+    font-size: 18px;
+}
+
+.form-grid,
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group label {
+    color: #374151;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    background-color: white;
+    color: #1f2937;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.date-group {
+    grid-column: 1 / -1;
+    max-width: 50%;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+button {
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 17px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.primary-button {
+    background-color: #2563eb;
+    color: white;
+}
+
+.primary-button:hover {
+    background-color: #1d4ed8;
+}
+
+.secondary-button {
+    background-color: white;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.secondary-button:hover {
+    background-color: #f9fafb;
+}
+
+.filter-grid {
+    margin-bottom: 22px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    white-space: nowrap;
+}
+
+th,
+td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 13px;
+}
+
+th {
+    color: #4b5563;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.type-label {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.income-label {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.expense-label {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.income-amount {
+    color: #16a34a;
+    font-weight: 700;
+}
+
+.expense-amount {
+    color: #dc2626;
+    font-weight: 700;
+}
+
+.delete-button {
+    padding: 6px 10px;
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.delete-button:hover {
+    background-color: #fecaca;
+}
+
+.empty-message {
+    padding: 24px;
+    text-align: center;
+    color: #9ca3af;
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 92%;
+        margin-top: 20px;
+    }
+
+    .summary-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .form-grid,
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .date-group {
+        max-width: 100%;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    .page-heading h2 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 420px) {
+    .navbar {
+        padding: 16px 4%;
+    }
+
+    .navbar h1 {
+        font-size: 17px;
+    }
+
+    .form-buttons {
+        flex-wrap: wrap;
+    }
+}
